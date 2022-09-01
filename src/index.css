@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {   
+    body {
+        @apply bg-[#FAFAFB] tracking-wide font-sans
+    }
+    p, span, label, button, ul, li, a {
+        @apply font-normal text-sm
+    }
+}
+
