@@ -9,5 +9,8 @@
     p, span, label, button, ul, li, a {
         @apply font-normal text-sm
     }
+    td {
+        @apply font-normal
+    }
 }
 

@@ -1,5 +1,5 @@
 import Wrapper from "../layout/Wrapper";
-import DashboardInfoCard from "../components/ui-util/DashboardInfoCard/DashboardInfoCard";
+import DashboardInfoCard from "../components/DashboardInfoCard/DashboardInfoCard";
 
 import SplineArea from "../charts/SplineArea";
 import Pie from "../charts/Pie";
