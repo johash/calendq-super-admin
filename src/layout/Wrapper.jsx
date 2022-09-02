@@ -1,8 +1,8 @@
 const Wrapper = ({ children, sidebarOpen }) => {
   return (
     <div
-      className={`w-full ${
-        sidebarOpen ? "pl-[288px]" : "pl-[64px]"
+      className={`pl-0 w-full ${
+        sidebarOpen ? "lg:pl-[288px]" : "lg:pl-[64px]"
       } duration-500`}
     >
       {children}

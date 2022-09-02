@@ -1,41 +1,12 @@
 import React, { useState } from "react";
-import { AiOutlineDashboard } from "react-icons/ai";
-import { IoAnalyticsOutline } from "react-icons/io5";
-import { TbPresentationAnalytics, TbUsers } from "react-icons/tb";
-import { RiBuilding4Line, RiUser2Line } from "react-icons/ri";
-import {
-  MdOutlineStarBorderPurple500,
-  MdOutlineAdminPanelSettings,
-} from "react-icons/md";
-import { BiSupport } from "react-icons/bi";
+
 import { HiMenuAlt3 } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { menusItems } from "../../constants/menuItems";
 
 const Sidebar = ({ open, setOpen }) => {
-  const menus = [
-    { name: "dashboard", link: "/", icon: AiOutlineDashboard },
-    { name: "analytics", link: "/analytics", icon: IoAnalyticsOutline },
-    { name: "sales", link: "/sales", icon: TbPresentationAnalytics },
-    {
-      name: "companies",
-      link: "/companies",
-      icon: RiBuilding4Line,
-      margin: true,
-    },
-    { name: "users", link: "/users", icon: RiUser2Line },
-    { name: "employees", link: "/employees", icon: TbUsers },
-    {
-      name: "packages",
-      link: "/packages",
-      icon: MdOutlineStarBorderPurple500,
-      margin: true,
-    },
-    { name: "admin", link: "/admin", icon: MdOutlineAdminPanelSettings },
-    { name: "support", link: "/support", icon: BiSupport },
-  ];
-
   return (
-    <section className="fixed flex gap-6 z-50">
+    <section className="fixed z-50 hidden lg:flex lg:gap-6">
       <div
         className={`bg-white min-h-screen ${
           open ? "w-72" : "w-16"
@@ -57,7 +28,7 @@ const Sidebar = ({ open, setOpen }) => {
           />
         </div>
         <div className="mt-4 flex flex-col gap-4 relative">
-          {menus?.map((menu, i) => (
+          {menusItems?.map((menu, i) => (
             <Link
               to={menu?.link}
               key={i}
